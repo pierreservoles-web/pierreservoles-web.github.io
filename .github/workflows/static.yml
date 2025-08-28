@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mes créations — Portfolio</title>
+  <meta name="description" content="Portfolio des créations — exposition sans vente en ligne. Passez au mode boutique quand vous êtes prêt."/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .glass { backdrop-filter: blur(8px); background: rgba(255,255,255,0.7); }
+    .shadow-soft { box-shadow: 0 10px 25px rgba(0,0,0,.08); }
+  </style>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 text-slate-800">
+  <header class="sticky top-0 z-30 bg-white/80 glass border-b border-slate-200/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+      <div class="flex items-center gap-2">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 7h18M6 7v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V7"/><path d="M8 7V5a4 4 0 0 1 8 0v2"/></svg>
+        <a href="#" class="font-bold text-lg tracking-wide">Atelier — Portfolio</a>
+        <span class="ml-2 px-2 py-0.5 text-xs rounded-full bg-slate-200 text-slate-700">Exposition</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <a href="#contact" class="rounded-xl border border-slate-300 bg-white/70 px-3 py-2 text-sm hover:border-slate-400">Me contacter</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8">
+    <div class="grid md:grid-cols-2 gap-6 items-center">
+      <div>
+        <h1 class="text-3xl sm:text-4xl font-extrabold leading-tight">Découvrez mes <span class="bg-emerald-200 rounded px-2">créations</span></h1>
+        <p class="mt-3 text-slate-600">Portfolio — pas de vente en ligne pour l’instant. Écrivez‑moi pour toute question, commande personnalisée ou exposition.</p>
+        <div class="mt-5 flex gap-3">
+          <a href="#catalogue" class="inline-flex items-center justify-center rounded-xl bg-emerald-600 text-white px-4 py-2.5 text-sm shadow-soft hover:bg-emerald-700">Voir la galerie</a>
+          <a href="#comment-personnaliser" class="inline-flex items-center justify-center rounded-xl border border-slate-300 bg-white px-4 py-2.5 text-sm hover:border-slate-400">Activer la vente plus tard</a>
+        </div>
+      </div>
+      <div class="relative">
+        <div class="aspect-[4/3] rounded-2xl bg-white shadow-soft p-4 grid grid-cols-3 gap-3">
+          <div class="rounded-xl bg-[url('https://images.unsplash.com/photo-1585386959984-a41552231605?q=80&w=900&auto=format&fit=crop')] bg-cover bg-center"></div>
+          <div class="rounded-xl bg-[url('https://images.unsplash.com/photo-1503602642458-232111445657?q=80&w=900&auto=format&fit=crop')] bg-cover bg-center"></div>
+          <div class="rounded-xl bg-[url('https://images.unsplash.com/photo-1481349518771-20055b2a7b24?q=80&w=900&auto=format&fit=crop')] bg-cover bg-center"></div>
+          <div class="rounded-xl bg-[url('https://images.unsplash.com/photo-1542435503-956c469947f6?q=80&w=900&auto=format&fit=crop')] bg-cover bg-center"></div>
+          <div class="rounded-xl bg-[url('https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=900&auto=format&fit=crop')] bg-cover bg-center"></div>
+          <div class="rounded-xl bg-[url('https://images.unsplash.com/photo-1520975922284-ecd566525bc9?q=80&w=900&auto=format&fit=crop')] bg-cover bg-center"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="catalogue" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10">
+    <div class="flex items-end justify-between gap-4 mb-4">
+      <div>
+        <h2 class="text-2xl font-bold">Galerie</h2>
+        <p class="text-sm text-slate-500">Exemples — remplacez les œuvres par les vôtres.</p>
+      </div>
+    </div>
+    <div id="grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+  </section>
+
+  <section id="comment-personnaliser" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 mb-16">
+    <div class="rounded-2xl bg-white shadow-soft p-6">
+      <h3 class="text-xl font-semibold">Passer en mode « boutique » quand vous voulez</h3>
+      <ol class="list-decimal pl-5 mt-2 space-y-1 text-slate-700 text-sm">
+        <li>Ouvrez le fichier et remplacez <code>MODE = 'gallery'</code> par <code>'shop'</code>.</li>
+        <li>Ajoutez vos produits dans <code>PRODUCTS</code> (nom, prix, image, <code>paymentLink</code> Stripe/PayPal).</li>
+        <li>Publiez le même fichier ; tout bascule en **vente** (panier, prix, liens de paiement).</li>
+        <li>Ajoutez vos **CGV / Rétractation / Médiation** (sections ci‑dessous déjà prêtes).</li>
+      </ol>
+    </div>
+  </section>
+
+  <footer class="border-t border-slate-200/70 py-8 text-sm text-slate-600">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-3 gap-6">
+      <div>
+        <p class="font-semibold">Atelier — Portfolio</p>
+        <p class="mt-1">© <span id="year"></span> — Tous droits réservés.</p>
+      </div>
+      <div>
+        <p class="font-semibold">Légal</p>
+        <ul class="mt-1 space-y-1">
+          <li><a href="#mentions-legales" class="hover:underline">Mentions légales</a></li>
+          <li><a href="#cgv" class="hover:underline">CGV (activées en mode vente)</a></li>
+          <li><a href="#confidentialite" class="hover:underline">Confidentialité & cookies</a></li>
+        </ul>
+      </div>
+      <div id="contact">
+        <p class="font-semibold">Contact</p>
+        <p class="mt-1"><a href="mailto:pierre@servole.com" class="hover:underline">pierre@servole.com</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Sections légales -->
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 space-y-12">
+    <section id="mentions-legales" class="rounded-2xl bg-white shadow-soft p-6">
+      <h3 class="text-xl font-semibold">Mentions légales</h3>
+      <p class="text-sm text-slate-600">Modèle générique — à adapter à votre situation (particulier exposant / professionnel).</p>
+      <div class="mt-3 space-y-2 text-sm">
+        <p><strong>Éditeur :</strong> [Nom / Dénomination] — [Adresse postale] — <a href="mailto:pierre@servole.com" class="underline">pierre@servole.com</a> — [Téléphone].</p>
+        <p><strong>Statut :</strong> [Particulier exposant] / [Entrepreneur individuel (micro‑entreprise)] / [SASU, EURL…] — SIREN/SIRET : [•••] — APE : [•••].</p>
+        <p><strong>Directeur de la publication :</strong> [Nom, prénom].</p>
+        <p><strong>Hébergeur :</strong> [Netlify / Vercel / GitHub Pages / autre] — [Adresse] — [Site].</p>
+        <p><strong>Propriété intellectuelle :</strong> l’ensemble des créations présentées est protégé ; toute reproduction / usage nécessite une autorisation écrite.</p>
+      </div>
+    </section>
+
+    <section id="cgv" class="rounded-2xl bg-white shadow-soft p-6">
+      <h3 class="text-xl font-semibold">Conditions Générales de Vente (actives en mode « boutique »)</h3>
+      <p class="text-sm text-slate-600">Ce modèle s’applique dès l’activation de la vente (MODE = 'shop').</p>
+      <div class="prose prose-sm max-w-none">
+        <h4>1. Champ d’application</h4>
+        <p>Les présentes CGV régissent les ventes conclues sur ce site auprès de consommateurs. L’acceptation des CGV est requise avant tout achat.</p>
+        <h4>2. Produits, prix</h4>
+        <p>Descriptions et photos non contractuelles. Prix TTC en euros, hors frais de livraison indiqués avant validation. Franchise en base de TVA le cas échéant : « TVA non applicable – art. 293 B du CGI ».</p>
+        <h4>3. Commande</h4>
+        <p>Processus de commande en ligne (panier, coordonnées, paiement). L’email de confirmation vaut accusé de réception.</p>
+        <h4>4. Paiement</h4>
+        <p>Paiement sécurisé via prestataires (Stripe/PayPal). La commande n’est définitive qu’après encaissement.</p>
+        <h4>5. Livraison</h4>
+        <p>Livraison à l’adresse indiquée. Délais annoncés avant paiement ; à défaut, 30 jours max. Risques transférés à la remise.</p>
+        <h4>6. Droit de rétractation</h4>
+        <p>14 jours à compter de la réception, sans motif, sauf exceptions légales (biens personnalisés, hygiène scellés…). Le consommateur supporte les frais de retour.</p>
+        <details class="mt-2"><summary class="cursor-pointer">Formulaire type de rétractation</summary>
+          <pre class="text-xs bg-slate-50 p-3 rounded">À l’attention de [Nom/Adresse/E‑mail]
+Je vous notifie ma rétractation du contrat portant sur la vente suivante :
+— Commande n° [•••] du [•••]
+— Reçu le [•••]
+Nom :
+Adresse :
+Date :   Signature :
+</pre>
+        </details>
+        <h4>7. Garanties</h4>
+        <p>Application des garanties légales de conformité (2 ans) et contre les vices cachés. Contact SAV ci‑dessous.</p>
+        <h4>8. Retours & SAV</h4>
+        <p>Procédure de retour : contact préalable par email, renvoi avec preuve d’achat, remboursement selon état/usage.</p>
+        <h4>9. Médiation & RLL</h4>
+        <p>Médiateur de la consommation : [Nom de l’organisme] — [Site]. Plateforme européenne RLL : <a href="https://ec.europa.eu/consumers/odr" target="_blank" class="underline">ec.europa.eu/consumers/odr</a>.</p>
+        <h4>10. Données personnelles</h4>
+        <p>Voir Politique de confidentialité.</p>
+        <h4>11. Droit applicable</h4>
+        <p>Droit français. Tribunaux compétents selon règles de protection du consommateur.</p>
+        <h4>12. Informations environnementales</h4>
+        <p>Emballages ménagers : IDU ADEME [•••] — consignes de tri (Triman/Info‑tri) indiquées sur les colis.</p>
+      </div>
+    </section>
+
+    <section id="confidentialite" class="rounded-2xl bg-white shadow-soft p-6">
+      <h3 class="text-xl font-semibold">Politique de confidentialité & cookies</h3>
+      <div class="prose prose-sm max-w-none">
+        <h4>Responsable & contact</h4>
+        <p>Responsable du traitement : [Nom] — <a class="underline" href="mailto:pierre@servole.com">pierre@servole.com</a>.</p>
+        <h4>Données traitées & finalités</h4>
+        <p>Formulaire/contact : identité, email, message → répondre à vos demandes. Commande (en mode boutique) : identité, coordonnées, livraison, paiement → exécution du contrat.</p>
+        <h4>Bases légales</h4>
+        <p>Intérêt légitime (contact), exécution du contrat (commande), obligation légale (facturation), consentement (newsletter).</p>
+        <h4>Durées</h4>
+        <p>Contacts : 12 mois. Commandes/factures : 10 ans. Newsletters : jusqu’au retrait du consentement.</p>
+        <h4>Destinataires & transferts</h4>
+        <p>Prestataires techniques (hébergeur, paiement, emailing). Pas de transfert hors UE sans garanties appropriées.</p>
+        <h4>Cookies</h4>
+        <p>Par défaut, ce site ne dépose pas de cookies non essentiels. Si vous activez analytics/ads, mettez en place un bandeau de consentement permettant le refus aussi simple que l’acceptation.</p>
+        <h4>Vos droits</h4>
+        <p>Accès, rectification, effacement, limitation, opposition, portabilité ; droit d’introduire une réclamation auprès de la CNIL. Contact : <a class="underline" href="mailto:pierre@servole.com">pierre@servole.com</a>.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Panier désactivé en mode expo -->
+
+  <script>
+    // === Mode site ===
+    const MODE = 'gallery';
+    const CONTACT_EMAIL = 'pierre@servole.com';
+
+    // === Données démo ===
+    const PRODUCTS = [
+      { id:'work1', name:'Création A', price: 0, image:'https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=800&auto=format&fit=crop', paymentLink:'' },
+      { id:'work2', name:'Création B', price: 0, image:'https://images.unsplash.com/photo-1520975922284-ecd566525bc9?q=80&w=800&auto=format&fit=crop', paymentLink:'' },
+      { id:'work3', name:'Création C', price: 0, image:'https://images.unsplash.com/photo-1542435503-956c469947f6?q=80&w=800&auto=format&fit=crop', paymentLink:'' },
+      { id:'work4', name:'Création D', price: 0, image:'https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=800&auto=format&fit=crop', paymentLink:'' },
+      { id:'work5', name:'Création E', price: 0, image:'https://images.unsplash.com/photo-1585386959984-a41552231605?q=80&w=800&auto=format&fit=crop', paymentLink:'' },
+      { id:'work6', name:'Création F', price: 0, image:'https://images.unsplash.com/photo-1503602642458-232111445657?q=80&w=800&auto=format&fit=crop', paymentLink:'' }
+    ];
+
+    const gridEl = document.getElementById('grid');
+    const renderCatalogue = () => {
+      gridEl.innerHTML = PRODUCTS.map(p => `
+        <article class="rounded-2xl bg-white shadow-soft overflow-hidden flex flex-col">
+          <div class="aspect-[4/3] bg-slate-100 overflow-hidden">
+            <img src="${p.image}" alt="${p.name}" class="w-full h-full object-cover"/>
+          </div>
+          <div class="p-4 flex-1 flex flex-col">
+            <h3 class="font-semibold">${p.name}</h3>
+            <div class="mt-auto pt-4">
+              <a href="mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent('Infos — ' + p.name)}" class="rounded-xl border border-slate-300 bg-white px-4 py-2 text-sm hover:border-slate-400">Me contacter</a>
+            </div>
+          </div>
+        </article>
+      `).join('');
+    };
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+    renderCatalogue();
+  </script>
+</body>
+</html>
